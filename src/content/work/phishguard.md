@@ -2,7 +2,7 @@
 title: PhishGuard
 summary: AI-powered phishing URL detection with XGBoost, SHAP explanations, and calibrated confidence.
 role: Creator / ML Engineer
-date: 2026-06-15
+date: 2025-09-15
 tags: [Python, XGBoost, SHAP, FastAPI, Docker, GitHub Actions]
 url: https://shauryarawat29.github.io/phishguard
 repo: https://github.com/ShauryaRawat29/phishguard
