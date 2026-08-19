@@ -1,6 +1,6 @@
 ---
 title: Homelab & Self-Hosted Infrastructure
-summary: A Proxmox VE homelab running since 2023 — DNS, media, storage, git, passwords, monitoring, and smart home.
+summary: A Proxmox VE homelab running since 2023 — DNS, media, notes, storage, git, passwords, monitoring, and smart home.
 role: Owner / Sysadmin
 date: 2023-04-01
 tags: [Proxmox VE, Ubuntu Server, Docker, Linux, Networking, Home Assistant]
@@ -59,13 +59,27 @@ Everything else is a `docker-compose.yml` service on one of those hosts.
 
 The first service I ever deployed. AdGuard Home sits on the LAN as the DHCP-assigned DNS server, blocks ads and trackers at the network level, and gives me query logs for the whole house. It's been running for three years without a single manual restart.
 
-### Media server (Jellyfin)
+### Media server (Jellyfin + *arr stack)
 
-Jellyfin serves the media library to every device in the house — TV, phone, laptop — with no subscription and no phone-home. The `media` VM also runs the *arr suite to fetch metadata and keep the library tidy.
+Jellyfin serves the media library to every device in the house — TV, phone, laptop — with no subscription and no phone-home. On its own it would only be a nice player, so the `media` VM pairs it with the **\*arr suite**, which does the boring work Jellyfin can't:
+
+- **Sonarr** — TV shows: watches the watchlist, grabs new episodes as they release, and hands them to the downloader.
+- **Radarr** — movies, same idea: build a wanted list once, let it collect.
+- **Prowlarr** — the indexer hub: a single place to manage every indexer, and the one API both Sonarr and Radarr talk to.
+- **Bazarr** — subtitles: fetches the right subtitle track automatically for whatever lands in the library.
+- **qBittorrent** — the downloader the arrs feed; isolated in its own container with the firewall to match.
+
+The flow is: watchlist → arr grabs it → downloader fetches it → files land in the media folder → Jellyfin picks them up and makes them watchable everywhere. Metadata (posters, fan art, episode guides) is pulled automatically, so the library stays tidy without manual curation.
 
 ### Cloud storage (Nextcloud)
 
 Nextcloud is the self-hosted replacement for Google Drive. Files, contacts, and calendar sync across devices via the official clients, and nothing leaves the network. It doubles as the lab's file-sharing backbone — I mount parts of it into other containers so they can write backups to the same place.
+
+### Note-taking (Obsidian)
+
+Obsidian is my notes app — and the most-used service on the whole network. Every note is plain Markdown stored as a file, which is exactly why it fits a homelab: the vault lives on the `services` VM, and a file-sync layer (Syncthing) mirrors it to my laptop and phone. The same sync also gives me an always-offsite-ish copy of the vault, since it lands wherever I've got the folder open.
+
+I keep the lab's own documentation here too — the write-ups for every service, the restore runbooks, and the "what broke and how I fixed it" log. When I need to remember how a setup works, I open the vault instead of the terminal.
 
 ### Photo backup (Immich)
 
