@@ -61,11 +61,7 @@ const formattedDate = formatDate(date);
       }
     </dl>
 
-    <div class="prose prose-sm sm:prose-base mt-10 max-w-2xl">
-      <Content />
-    </div>
-
-    <div class="mt-10 flex flex-wrap gap-3">
+    <div class="mt-8 flex flex-wrap gap-3">
       {
         url && (
           <Button href={url} variant="solid">
@@ -80,6 +76,10 @@ const formattedDate = formatDate(date);
           </Button>
         )
       }
+    </div>
+
+    <div class="prose prose-sm sm:prose-base mt-10 max-w-2xl">
+      <Content />
     </div>
   </article>
 </BaseLayout>
