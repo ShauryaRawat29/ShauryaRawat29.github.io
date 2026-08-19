@@ -1,0 +1,91 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Button from '@/components/Button.astro';
+import { SITE, RESUME_PATH } from '@/site.config';
+
+const tools = [
+  'Python',
+  'XGBoost',
+  'SHAP',
+  'scikit-learn',
+  'FastAPI',
+  'FAISS',
+  'sentence-transformers',
+  'RAG',
+  'Next.js',
+  'React',
+  'Docker',
+  'Linux',
+  'Git',
+  'SQL',
+];
+
+const certifications = [
+  'CS50: Introduction to Computer Science — Harvard University (edX)',
+  'Machine Learning Crash Course — Google',
+  'Python for Data Science — NPTEL',
+  'Demystifying Networking — IIT Bombay',
+  'ChatGPT Prompt Engineering for Developers — DeepLearning.AI',
+];
+---
+
+<BaseLayout title="About" description={`A bit about ${SITE.name} and how they work.`}>
+  <section class="mx-auto max-w-3xl px-6 pt-16 pb-24 sm:pt-24">
+    <p class="text-ink-soft mb-6 font-mono text-xs tracking-[0.2em] uppercase">About</p>
+
+    <h1 class="font-display text-ink max-w-xl text-3xl font-medium sm:text-4xl">
+      {SITE.role}.
+    </h1>
+
+    <div class="prose prose-sm sm:prose-base mt-8 max-w-xl">
+      <p>
+        I'm a B.Tech CSE (IoT) student at Amity University, Noida (2023–2027), currently an AI
+        Intern at Syphyr Pvt. Ltd. I build applied machine learning — systems that solve real
+        problems and explain themselves, not black boxes.
+      </p>
+      <p>
+        My projects follow one rule: ship something usable. PhishGuard is a deployed, live
+        phishing detector with SHAP explanations on every prediction. QueryDocs runs a full RAG
+        pipeline at zero cost, with no API keys required. The AI Essay Detector gives
+        per-sentence evidence instead of a lazy binary verdict.
+      </p>
+      <p>
+        Outside of ML, I manage a Proxmox VE homelab with Docker deployments and Ubuntu Server
+        VMs — the kind of hands-on Linux work that keeps me honest about how the stack actually
+        runs.
+      </p>
+    </div>
+
+    <div class="mt-10">
+      <p class="text-ink-soft mb-3 font-mono text-xs tracking-[0.2em] uppercase">Tools</p>
+      <ul class="flex flex-wrap gap-2">
+        {
+          tools.map((tool) => (
+            <li class="border-line text-ink-soft rounded-full border px-3 py-1 font-mono text-xs">
+              {tool}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <div class="mt-10">
+      <p class="text-ink-soft mb-3 font-mono text-xs tracking-[0.2em] uppercase">Certifications</p>
+      <ul class="space-y-1.5">
+        {
+          certifications.map((cert) => (
+            <li class="text-ink-soft text-sm">
+              <span class="text-signal mr-2" aria-hidden="true">▹</span>
+              {cert}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <div class="mt-10 flex flex-wrap gap-3">
+      <Button href={RESUME_PATH} variant="solid">Download resume</Button>
+      <Button href={`mailto:${SITE.email}`} variant="ghost">Get in touch</Button>
+    </div>
+  </section>
+</BaseLayout>
