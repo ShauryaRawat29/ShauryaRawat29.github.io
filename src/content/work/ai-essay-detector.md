@@ -9,6 +9,8 @@ featured: true
 draft: false
 ---
 
+## The problem
+
 Built for **Project 2 of the 2026 i12 HR Drive Hackathon**. The core stance: an AI-writing detector that gives a binary "AI or not" verdict is both dishonest and useless. This one measures *machine-like signals* and shows the evidence per sentence — with the limitations stated openly.
 
 ## How it works
