@@ -17,6 +17,7 @@ export const SITE = {
 } as const;
 
 export const RESUME_PATH = '/resume/Shaurya-Rawat-Resume.docx';
+export const KOREAN_RESUME_PATH = '/resume/Shaurya-Rawat-Korean-Portfolio.docx';
 
 export const NAV_LINKS = [
   { label: 'Work', href: '/work' },

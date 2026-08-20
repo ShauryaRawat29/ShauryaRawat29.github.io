@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Button from '@/components/Button.astro';
-import { SITE, RESUME_PATH } from '@/site.config';
+import { SITE, RESUME_PATH, KOREAN_RESUME_PATH } from '@/site.config';
 
 const tools = [
   'Python',
@@ -85,6 +85,7 @@ const certifications = [
 
     <div class="mt-10 flex flex-wrap gap-3">
       <Button href={RESUME_PATH} variant="solid">Download resume</Button>
+      <Button href={KOREAN_RESUME_PATH} variant="ghost">Korean resume</Button>
       <Button href={`mailto:${SITE.email}`} variant="ghost">Get in touch</Button>
     </div>
   </section>
