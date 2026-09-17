@@ -3,7 +3,7 @@ title: AI Essay Detector
 summary: Evidence-based AI-writing analysis using sentence-level statistical signals scored against human baselines.
 role: Creator / ML Engineer
 date: 2026-08-10
-tags: [Python, FastAPI, Next.js, statistical NLP]
+tags: [Python, FastAPI, Next.js, statistical NLP, ruff, mypy]
 repo: https://github.com/ShauryaRawat29/ai-essay-detector
 featured: true
 draft: false

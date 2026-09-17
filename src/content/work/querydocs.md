@@ -3,7 +3,7 @@ title: QueryDocs
 summary: Zero-cost RAG document Q&A — upload PDF/TXT/MD/DOCX and ask grounded questions with source citations.
 role: Creator / ML Engineer
 date: 2025-12-15
-tags: [Python, FastAPI, FAISS, sentence-transformers, Next.js]
+tags: [Python, FastAPI, FAISS, sentence-transformers, Next.js, GitHub Actions]
 repo: https://github.com/ShauryaRawat29/querydocs
 featured: true
 draft: false
