@@ -5,6 +5,11 @@ import { SITE, RESUME_PATH } from '@/site.config';
 
 const tools = [
   'Python',
+  'C',
+  'C++',
+  'JavaScript',
+  'TypeScript',
+  'SQL',
   'XGBoost',
   'SHAP',
   'scikit-learn',
@@ -12,19 +17,34 @@ const tools = [
   'FAISS',
   'sentence-transformers',
   'RAG',
+  'Prompt Engineering',
   'Next.js',
   'React',
   'Docker',
   'Linux',
   'Git',
-  'SQL',
+  'GitHub Actions',
+  'pytest',
+  'fail2ban',
+  'nftables',
+  'auditd',
+  'OpenVAS',
+  'Trivy',
+  'Sigma',
+  'Lynis',
+  'BloodHound',
+  'Prometheus',
+  'Grafana',
+  'Loki',
+  'Traefik',
+  'Proxmox VE',
 ];
 
 const certifications = [
   'CS50: Introduction to Computer Science — Harvard University (edX)',
-  'Machine Learning Crash Course — Google',
   'Python for Data Science — NPTEL',
   'Demystifying Networking — IIT Bombay',
+  'Machine Learning Crash Course — Google',
   'ChatGPT Prompt Engineering for Developers — DeepLearning.AI',
 ];
 ---
@@ -40,19 +60,29 @@ const certifications = [
     <div class="prose prose-sm sm:prose-base mt-8 max-w-xl">
       <p>
         I'm a B.Tech CSE (IoT) student at Amity University, Noida (2023–2027), currently an AI
-        Intern at Syphyr Pvt. Ltd. I build applied machine learning — systems that solve real
-        problems and explain themselves, not black boxes.
+        Engineering Intern at Syphyr Pvt. Ltd. (May–Jul 2026). I build applied machine learning —
+        systems that solve real problems and explain themselves, not black boxes.
+      </p>
+      <p>
+        At Syphyr, I shipped 3 proof-of-concept AI applications in Python — document triage, intent
+        classification, data extraction — with 2 advancing to live client demos. Built automated
+        evaluation harnesses across 5+ client models, cutting manual testing effort ~30%.
       </p>
       <p>
         My projects follow one rule: ship something usable. PhishGuard is a deployed, live
-        phishing detector with SHAP explanations on every prediction. QueryDocs runs a full RAG
-        pipeline at zero cost, with no API keys required. The AI Essay Detector gives
-        per-sentence evidence instead of a lazy binary verdict.
+        phishing detector with SHAP explanations on every prediction (XGBoost on 468K URLs,
+        {'<1% adversarial evasion'}). QueryDocs runs a full RAG pipeline at zero cost, with no API
+        keys required. The AI Essay Detector gives per-sentence evidence instead of a lazy binary
+        verdict (200+ tests, ruff + mypy clean).
       </p>
       <p>
-        Outside of ML, I manage a Proxmox VE homelab with Docker deployments and Ubuntu Server
-        VMs — the kind of hands-on Linux work that keeps me honest about how the stack actually
-        runs.
+        Outside of ML, I manage a Proxmox VE homelab (15+ Ubuntu VMs) with VLAN segmentation,
+        DNS (Pi-hole/Unbound), reverse proxy (Traefik), centralized logging (Loki), and metrics
+        (Prometheus/Grafana). Implemented hardening baseline: fail2ban, nftables, SSH-key-only
+        access, auditd, unattended-upgrades; Lynis compliance scoring. Built vulnerability
+        management pipeline with OpenVAS/Trivy scans, CVE triage, and Sigma rule validation.
+        Active Directory security lab: Kerberos delegation auditing, Kerberoasting/AS-REP roasting,
+        BloodHound attack-path analysis, MITRE ATT&CK-mapped detection rule authoring.
       </p>
     </div>
 

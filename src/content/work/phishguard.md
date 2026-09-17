@@ -4,8 +4,8 @@ summary: AI-powered phishing URL detection with XGBoost, SHAP explanations, and 
 role: Creator / ML Engineer
 date: 2026-07-15
 tags: [Python, XGBoost, SHAP, FastAPI, Docker, GitHub Actions]
-url: https://shauryarawat29.github.io/phishguard
-repo: https://github.com/ShauryaRawat29/phishguard
+url: https://frontend-flame-ten-11.vercel.app/
+repo: https://github.com/ShauryaRawat29/phishguard-showcase
 featured: true
 draft: false
 ---

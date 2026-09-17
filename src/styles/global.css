@@ -11,7 +11,7 @@
    hardcodes a hex value.
    --------------------------------------------------------------------- */
 :root {
-  color-scheme: light;
+  color-scheme: light dark;
 
   --paper: #f7f6f3; /* page background */
   --ink: #15161b; /* primary text */
@@ -19,6 +19,19 @@
   --signal: #3d3dff; /* the one accent color */
   --line: #e4e2dc; /* borders, rules */
   --surface: #efeeea; /* cards, raised panels */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not(.dark) {
+    color-scheme: dark;
+
+    --paper: #101114;
+    --ink: #f2f1ed;
+    --ink-soft: #9a9ca6;
+    --signal: #7b7bff;
+    --line: #26272c;
+    --surface: #1a1b20;
+  }
 }
 
 .dark {

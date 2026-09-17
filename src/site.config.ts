@@ -2,12 +2,14 @@
 // and SEO defaults all read from here instead of hardcoding copy.
 export const SITE = {
   name: 'Shaurya Rawat',
-  role: 'Machine Learning, Data & AI Engineering',
+  role: 'AI/ML Engineering — Applied ML, RAG & Security Tooling',
   email: 'shauryarawat29@gmail.com',
+  phone: '+91-8368817060',
+  location: 'Delhi, India',
   tagline: 'I build applied ML systems and the tools that make them usable.',
   description:
-    'Portfolio of Shaurya Rawat — B.Tech CSE (IoT) student at Amity University building applied machine learning, RAG, and security tooling with Python, FastAPI, and modern AI/ML stacks.',
-  status: 'AI Intern @ Syphyr · open to ML/Data/AI roles',
+    'Portfolio of Shaurya Rawat — B.Tech CSE (IoT) student at Amity University. AI Engineering Intern at Syphyr Pvt. Ltd. Building applied machine learning, RAG pipelines, phishing detection, and security tooling with Python, FastAPI, XGBoost, and modern AI/ML stacks.',
+  status: 'AI Engineering Intern @ Syphyr (May–Jul 2026) · open to ML/AI/Data roles',
   social: [
     { label: 'GitHub', href: 'https://github.com/ShauryaRawat29' },
     { label: 'LinkedIn', href: 'https://linkedin.com/in/shaurya-rawat-8751922b5' },

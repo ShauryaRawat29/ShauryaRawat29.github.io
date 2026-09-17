@@ -1,7 +1,4 @@
 ---
-// Pairs with the no-FOUC inline script in BaseLayout's <head>, which sets
-// the initial .dark class before first paint. This component only handles
-// the click-to-toggle interaction after that.
 ---
 
 <button
@@ -51,7 +48,5 @@
     });
   }
 
-  // astro:page-load fires on the first load AND after every client-side
-  // navigation done by <ClientRouter />, so the button stays wired up.
   document.addEventListener('astro:page-load', initThemeToggle);
 </script>
